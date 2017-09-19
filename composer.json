@@ -17,5 +17,12 @@
             "email": "aleksey.kostenko.dev@gmail.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelAdminPanel\\Admin\\AdminServiceProvider"
+            ]
+        }
+    }
 }
