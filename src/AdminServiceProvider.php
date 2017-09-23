@@ -2,7 +2,9 @@
 
 namespace LaravelAdminPanel\Admin;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
+use LaravelAdminPanel\Admin\Facades\Admin as AdminFacade;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,11 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $loader = AliasLoader::getInstance();
+        $loader->alias('Admin', AdminFacade::class);
+
+        app()->singleton('admin', function() {
+            return new Admin;
+        });
     }
 }
