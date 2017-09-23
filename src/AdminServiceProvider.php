@@ -3,25 +3,26 @@
 namespace LaravelAdminPanel\Admin;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
 
 class AdminServiceProvider extends ServiceProvider
 {
     /**
-     * Register the application services.
+     * Bootstrap the application services.
+     *
+     * @return void
      */
-    public function register()
+    public function boot()
     {
-
+        //
     }
 
     /**
-     * Bootstrap the application services.
+     * Register the application services.
      *
-     * @param \Illuminate\Routing\Router $router
+     * @return void
      */
-    public function boot(Router $router, Dispatcher $event)
+    public function register()
     {
-
+        //
     }
 }
