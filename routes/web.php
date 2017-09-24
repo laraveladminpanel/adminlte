@@ -13,8 +13,10 @@
 Route::group(['as' => 'admin.'], function () {
     $namespacePrefix = '\\'.config('admin.controllers.namespace').'\\';
 
-    // Main Admin and Logout Route
-    Route::get('/', [
-        'as' => 'dashboard', 'uses' => $namespacePrefix.'DashboardController@index'
-    ]);
+    Route::group(['middleware' => 'admin'], function () use ($namespacePrefix) {
+        // Main Admin and Logout Route
+        Route::get('/', [
+            'as' => 'dashboard', 'uses' => $namespacePrefix.'DashboardController@index'
+        ]);
+    });
 });
