@@ -8,4 +8,9 @@ class Admin
     {
         require __DIR__.'/../routes/web.php';
     }
+
+    public function view($name, array $parameters = [])
+    {
+        return view($name, $parameters);
+    }
 }
