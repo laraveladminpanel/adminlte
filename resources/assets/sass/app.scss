@@ -1,13 +1,11 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
-
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/dist/css/bootstrap";
 
 // Admin LTE
+@import "~font-awesome/scss/font-awesome";
+@import "~ionicons/dist/css/ionicons";
+@import "~admin-lte/dist/css/AdminLTE";
 @import "~admin-lte/dist/css/skins/all-skins";
-@import "node_modules/admin-lte/dist/css/AdminLTE";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic");
