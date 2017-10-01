@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('admin-lte/dist/js/adminlte');
 
 window.Vue = require('vue');
 
